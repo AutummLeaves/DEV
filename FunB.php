@@ -6,23 +6,23 @@
 <link rel="icon" href="">
 <link rel="stylesheet" type="text/css" href="style.css">
 <body>
-	<head>
-		<title></title>
-	</head>
+	<div class="container">
 
-	<form method="post" action="FunB.php">
-		<input type="submit" name ="Q" value="Press ALT + SHIFT + S!" accesskey="s">
-	</form>
+		<form method="post" action="FunB.php">
+			<input type="submit" name ="Q" value="Press ALT + SHIFT + S!" accesskey="s">
+		</form>
 
+	</div>
+	
 	<?php
 
 	if(isset($_POST['submit'])){
 
-        $Pressed = $_POST["Q"];
-        echo "$Pressed";
-    }
+		$Pressed = $_POST["Q"];
+		echo "$Pressed";
+	}
 
-    ?>
+	?>
 
 </body>
 </html>
