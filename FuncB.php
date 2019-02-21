@@ -8,21 +8,22 @@
 <body>
 	<div class="container">
 
-		<form method="post" action="FunB.php">
+		<form method="post" action="FuncB.php">
 			<input type="submit" name ="Q" value="Press ALT + SHIFT + S!" accesskey="s">
 		</form>
 
+		<?php
+
+		if(isset($_POST['submit'])){
+
+			$Pressed = $_POST["Q"];
+			echo "$Pressed";
+		}
+
+		?>
+
 	</div>
+
 	
-	<?php
-
-	if(isset($_POST['submit'])){
-
-		$Pressed = $_POST["Q"];
-		echo "$Pressed";
-	}
-
-	?>
-
 </body>
 </html>
