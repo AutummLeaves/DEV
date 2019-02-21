@@ -14,7 +14,7 @@
 
         <h2>HTML Form</h2>
 
-        <form class="form" action="" method="post" enctype="text/plain">
+        <form class="form" action="TestPHP.php" method="post">
             <div class="formgroup">
                 <label>First Name</label>
                 <input type="text" name="firstName" placeholder="Enter your name">
@@ -67,7 +67,7 @@
 
             <br>
 
-            <input type="submit" name="submit" value="Submit">
+            <input type="submit" name="submit" value="Submit" accesskey="p">
             
         </form>
 
@@ -121,7 +121,6 @@
         // using x inside this function will generate an error
         echo "<p>Variable x inside function is: $x</p>";
         $GLOBALS['y'] = $GLOBALS['x'] + $GLOBALS['y'];
-        $INFO_Retained = $INFO_Retained + 1;
         echo $INFO_Retained . "<br>";
     } 
 
@@ -131,18 +130,15 @@
 
     echo "<p>Variable x outside function is: $x</p>";
 
-    $firstname = $_POST["firstname"];
-    $lastname = $_POST["lastname"];
+    $firstname = $_POST["firstName"];
+    $lastname = $_POST["lastName"];
     echo "$firstname $lastname";
 
-    function display(){
-
-        $GLOBALS['color'] = "blue";
-    }
     
     if(isset($_POST['submit'])){
 
-        display();
+        $Pressed = $_POST["Q"];
+        echo "$Pressed";
     }
 
     ?> 
