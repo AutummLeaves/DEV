@@ -70,60 +70,83 @@
             <input type="submit" name="submit" value="Submit">
             
         </form>
+
+
+        <form method="post" action="TestPHP.php">
+            <input type="submit" name ="Q" value="Press ALT + SHIFT + S!" accesskey="s">
+        </form>
+
+        <br>
+        <p>Test</p>
+
     </div>
 </body>
 
+<div class="container">
+    <?php 
 
-<?php
-echo "My first PHP script! <br>"; // print
+    echo "My first PHP script! <br>"; // print
 
-// This is a single-line comment
+    // This is a single-line comment
 
-# This is also a single-line comment
+    # This is also a single-line comment
 
-/*
-This is a multiple-lines comment block
-that spans over multiple
-lines or line
-*/
-
-
-// Variable 
-// Global scope
-$txt = "Hello world!"; // String
-$x = 5; // int
-$y = 10.5; // double
+    /*
+    This is a multiple-lines comment block
+    that spans over multiple
+    lines or line
+    */
 
 
-echo "<br>";
-echo $x; // print x
-
-echo "<br><br>";
-
-$color = "red";
-
-echo "My car is " . $color . "<br>";
-echo "My house is " . $COLOR . "<br>";
-echo "My boat is " . $coLOR . "<br>";
+    // Variable 
+    // Global scope
+    $txt = "Hello world!"; // String
+    $x = 5; // int
+    $y = 10.5; // double
 
 
-function myTest() {
-    // using x inside this function will generate an error
-    echo "<p>Variable x inside function is: $x</p>";
-    $GLOBALS['y'] = $GLOBALS['x'] + $GLOBALS['y'];
-} 
+    echo "<br>";
+    echo $x; // print x
 
-myTest();
+    echo "<br><br>";
 
-echo $y;
+    static $color = "red";
 
-echo "<p>Variable x outside function is: $x</p>";
-
-$firstname = $_POST["firstname"];
-$lastname = $_POST["lastname"];
-echo "$firstname $lastname";
+    echo "My car is " . $color . "<br>";
+    echo "My house is " . $color . "<br>";
+    echo "My boat is " . $color . "<br>";
 
 
-?> 
+    function myTest() {
+        // using x inside this function will generate an error
+        echo "<p>Variable x inside function is: $x</p>";
+        $GLOBALS['y'] = $GLOBALS['x'] + $GLOBALS['y'];
+        $INFO_Retained = $INFO_Retained + 1;
+        echo $INFO_Retained . "<br>";
+    } 
+
+    myTest();
+
+    echo $y;
+
+    echo "<p>Variable x outside function is: $x</p>";
+
+    $firstname = $_POST["firstname"];
+    $lastname = $_POST["lastname"];
+    echo "$firstname $lastname";
+
+    function display(){
+
+        $GLOBALS['color'] = "blue";
+    }
+    
+    if(isset($_POST['submit'])){
+
+        display();
+    }
+
+    ?> 
+
+</div>
 
 </html>
