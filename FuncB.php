@@ -7,21 +7,39 @@
 <link rel="stylesheet" type="text/css" href="style.css">
 <body>
 	<div class="container">
+		<div class="center">
 
-		<form method="post" action="FuncB.php">
-			<input type="submit" name ="Q" value="Press ALT + SHIFT + S!" accesskey="s">
-		</form>
+			<form method="post" action="FuncB.php">
+				<input type="submit" name ="O" value="Press to Turn On!" accesskey="s">
+			</form>
 
-		<?php
+			<form method="post" action="FuncB.php">
+				<input type="submit" name ="Q" value="Press to Shut Down!" accesskey="s">
+			</form>
 
-		if(isset($_POST['submit'])){
+			<?php
 
-			$Pressed = $_POST["Q"];
-			echo "$Pressed";
-		}
+			define("on", "On");
+			define("off", "Off");
 
-		?>
+			if(isset($_POST['O'])){
 
+				echo "Button is ".on;
+
+			}
+
+			if(isset($_POST['Q'])){
+
+				echo "Button is ".off;
+
+			}
+
+			
+
+
+
+			?>
+		</div>
 	</div>
 
 	

@@ -8,17 +8,7 @@
 <body>
 	<div class="container">
 
-		<?php 
-
-	    // This is a single-line comment
-
-	    # This is also a single-line comment
-
-	    /*
-	    This is a multiple-lines comment block
-	    that spans over multiple
-	    lines or line
-	    */
+		<?php
 
 	    // Variable 
 	    // Global scope
@@ -41,7 +31,7 @@
 
 	    function myTest() {
 	        // using x inside this function will generate an error
-	    	echo "<p>Variable x inside function is: $x</p>";
+	    	echo "<p>Variable x inside function is: $x </p>";
 	    	$GLOBALS['y'] = $GLOBALS['x'] + $GLOBALS['y'];
 	    	echo $INFO_Retained . "<br>";
 	    } 
