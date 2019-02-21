@@ -88,11 +88,11 @@ lines or line
 */
 
 
-// Variable Auto data type association
+// Variable 
 // Global scope
-$txt = "Hello world!";
-$x = 5; 
-$y = 10.5; 
+$txt = "Hello world!"; // String
+$x = 5; // int
+$y = 10.5; // double
 
 
 echo "<br>";
@@ -109,12 +109,9 @@ echo "My boat is " . $coLOR . "<br>";
 
 function myTest() {
     // using x inside this function will generate an error
-    $A = 50
     echo "<p>Variable x inside function is: $x</p>";
     $GLOBALS['y'] = $GLOBALS['x'] + $GLOBALS['y'];
 } 
-
-// using A outside this function will generate an error
 
 myTest();
 
