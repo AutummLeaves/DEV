@@ -1,4 +1,16 @@
-When to use GET and POST:
+		// This is a single-line comment
+
+	    # This is also a single-line comment
+
+	    /*
+	    This is a multiple-lines comment block
+	    that spans over multiple
+	    lines or line
+	    */
+
+
+
+WHEN TO USE GET AND POST:
 
 One way to get rid of this error message is to make your form use GET instead of POST. Just keep in mind that this is not always an appropriate solution (read below).
 
