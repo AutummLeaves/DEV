@@ -10,9 +10,7 @@
 <body class="page">
     <div class="container">
 
-        <h1>My first PHP page</h1>
-
-        <h2>HTML Form</h2>
+        <h1>HTML Form</h1>
 
         <form class="form" action="Form.php" method="post">
             <div class="formgroup">

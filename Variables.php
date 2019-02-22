@@ -9,12 +9,14 @@
 
 	<div class="center">
 
+		<h1>Change Variables</h1>
+
 		<form method="post" action="Variables.php">
-			<input type="submit" name ="O" value="Blue" accesskey="s">
+			<input type="submit" name ="O" value="Blue" accesskey="b">
 		</form>
 
 		<form method="post" action="Variables.php">
-			<input type="submit" name ="Q" value="Green" accesskey="s">
+			<input type="submit" name ="Q" value="Green" accesskey="g">
 		</form>
 
 

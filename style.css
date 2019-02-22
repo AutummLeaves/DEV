@@ -15,14 +15,22 @@
 .container{
     width: 900px;
     margin: auto;
+    margin-top: 50px;
 }
 
 .center{
     width: 200px;
     margin: auto;
-    margin-top: 250px;
+    margin-top: 200px;
     margin-left: 150px;
 
+}
+
+.border {
+  width: 150px;
+  padding: 10px;
+  border: 5px solid gray;
+  margin: 0;
 }
 
 
