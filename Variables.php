@@ -6,8 +6,14 @@
 <link rel="icon" href="">
 <link rel="stylesheet" type="text/css" href="style.css">
 
-<body>
-	<div class="center">
+<header>
+	<div>
+		<img class="flower" src="https://i.imgur.com/WmmnLR1.png" alt="Header" width="100%" height="250px">        
+	</div>
+</header>
+
+<body class="page">
+	<div class="container">
 		<div class="oborder">
 			<h1>Change Variables</h1>
 

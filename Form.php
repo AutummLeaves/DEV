@@ -17,6 +17,12 @@
 }
 </style>
 
+<header>
+    <div>
+        <img class="flower" src="https://i.imgur.com/WmmnLR1.png" alt="Header" width="100%" height="250px">        
+    </div>
+</header>
+
 <body class="page">
     <div class="container">
         <div class="fborder">
@@ -79,13 +85,16 @@
 
             </form>
 
+            <br>
+
             <?php 
 
             $firstname = $_POST["firstName"];
             $lastname = $_POST["lastName"];
             echo "$firstname $lastname";
 
-            ?> 
+            ?>
+
         </div> 
     </div>
 </body>

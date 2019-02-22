@@ -15,15 +15,7 @@
 .container{
     width: 900px;
     margin: auto;
-    margin-top: 50px;
-}
-
-.center{
-    width: 200px;
-    margin: auto;
-    margin-top: 200px;
-    margin-left: 150px;
-
+    margin-top: 5px;
 }
 
 .border {
@@ -32,6 +24,7 @@
   border: 5px solid gray;
   margin: 0;
 }
+
 
 .mborder{
     width: 150px;
