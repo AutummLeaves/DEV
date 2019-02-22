@@ -6,25 +6,6 @@
 <link rel="icon" href="">
 <link rel="stylesheet" type="text/css" href="style.css">
 
-
-<style>
-
-.mborder{
-	width: 150px;
-  	padding: 10px;
-  	border: 5px solid gray;
-  	margin-top: 25px;
-}
-
-.oborder{
-	width: 250px;
- 	 padding: 10px;
-  	border: 5px solid gray;
-  	margin: 0;
-}
-	
-</style>
-
 <body>
 	<div class="center">
 		<div class="oborder">
@@ -43,7 +24,7 @@
 			<div class="mborder">
 
 				<?php
-				
+
 				define("on", "On");
 				define("off", "Off");
 
