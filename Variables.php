@@ -6,7 +6,17 @@
 <link rel="icon" href="">
 <link rel="stylesheet" type="text/css" href="style.css">
 <body>
-	<div class="container">
+
+	<div class="center">
+
+		<form method="post" action="Variables.php">
+			<input type="submit" name ="O" value="Blue" accesskey="s">
+		</form>
+
+		<form method="post" action="Variables.php">
+			<input type="submit" name ="Q" value="Green" accesskey="s">
+		</form>
+
 
 		<?php
 
@@ -16,24 +26,42 @@
 	    $x = 5; // int
 	    $y = 10.5; // double
 
-
 	    echo "<br>";
 	    echo $x; // print x
 
 	    echo "<br><br>";
 
-	    static $color = "red";
 
-	    echo "My car is " . $color . "<br>";
+	    $color = "red";
+
+	    define("blue", $GLOBALS['color'] = "blue");
+	    define("green", $GLOBALS['color'] = "green");
+	    
+		if(isset($_POST['O'])){
+
+			echo $GLOBALS['color'].blue;
+
+		} elseif(isset($_POST['Q'])){
+
+			echo $GLOBALS['color'].green;
+
+		} else {
+
+			return;
+		}
+
+		echo "<br>";
+
+		echo "My car is " 	. $color . "<br>";
 	    echo "My house is " . $color . "<br>";
-	    echo "My boat is " . $color . "<br>";
+	    echo "My boat is " 	. $color . "<br>";
+
 
 
 	    function myTest() {
 	        // using x inside this function will generate an error
 	    	echo "<p>Variable x inside function is: $x </p>";
 	    	$GLOBALS['y'] = $GLOBALS['x'] + $GLOBALS['y'];
-	    	echo $INFO_Retained . "<br>";
 	    } 
 
 	    myTest();
@@ -42,12 +70,9 @@
 
 	    echo "<p>Variable x outside function is: $x</p>";
 
-	    $firstname = $_POST["firstName"];
-	    $lastname = $_POST["lastName"];
-	    echo "$firstname $lastname";
-
 	    ?>
-		
+
 	</div>
+
 </body>
 </html>
