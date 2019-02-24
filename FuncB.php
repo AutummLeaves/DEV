@@ -6,11 +6,13 @@
 <link rel="icon" href="">
 <link rel="stylesheet" type="text/css" href="style.css">
 
+
 <header>
 	<div>
 		<img class="flower" src="https://i.imgur.com/WmmnLR1.png" alt="Header" width="100%" height="250px">        
 	</div>
 </header>
+
 
 <body class="page">
 	<div class="container">
@@ -22,7 +24,7 @@
 					<input type="submit" name ="O" value="Press to Turn On!" accesskey="s">
 				</form>
 
-				<form method="post" action="FuncB.php">
+				<form method="post" action="FuncB.php" >
 					<input type="submit" name ="Q" value="Press to Shut Down!" accesskey="s">
 				</form>
 			</div>
@@ -30,7 +32,7 @@
 			<div class="mborder">
 
 				<?php
-
+				
 				define("on", "On");
 				define("off", "Off");
 
@@ -49,7 +51,7 @@
 				?>
 			</div>
 		</div>
-	</div>	
+	</div>
 </body>
 
 </html>
