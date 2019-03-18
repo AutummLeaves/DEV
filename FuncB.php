@@ -37,15 +37,11 @@
 				define("off", "Off");
 
 				if(isset($_POST['O'])){
-
 					echo "Button is ".on;
-
 				}
 
 				if(isset($_POST['Q'])){
-
 					echo "Button is ".off;
-
 				}
 
 				?>
