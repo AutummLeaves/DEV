@@ -25,7 +25,7 @@
 				</form>
 
 				<form method="post" action="FuncB.php" >
-					<input type="submit" name ="Q" value="Press to Shut Down!" accesskey="s">
+					<input type="submit" name ="Q" value="Press to Shut Down!" accesskey="q">
 				</form>
 			</div>
 
