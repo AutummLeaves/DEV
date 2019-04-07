@@ -4,11 +4,17 @@
 <meta name=description content="">
 <meta name="keywords" content="">
 <link rel="icon" href="">
-<link rel="stylesheet" type="text/css" href="">
+<link rel="stylesheet" type="text/css" href="style.css">
 
 <head>
 	<title></title>
 </head>
+
+<header>
+	<div>
+		<img class="flower" src="https://i.imgur.com/WmmnLR1.png" alt="Header" width="100%" height="250px">        
+	</div>
+</header>
 
 <body>
 
@@ -24,8 +30,6 @@
     $len = $_GET["len"];
 
 	function BMI($gew,$len) {
-
-    	
     	$bmi = round($gew / (($len / 100)**2));
 	   	return $bmi;
 	   

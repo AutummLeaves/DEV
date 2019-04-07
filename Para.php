@@ -12,28 +12,30 @@
 
 <body>
 
-	<form method="GET" action="LoopEX.php">
-		<input type="number" name="EX">
-		<input type="text" name="VL">
-		<input type="submit" name ="S" value="submit" accesskey="g">
+	<form method="GET" action="">
+		<input type="number" name="getal">
+		<input type="number" name="keer">
+		<input type="submit" name ="S" accesskey="g">
 	</form>
 
-	<?php
+	<?php 
 
-	$submit = $_GET["EX"];
-	$VL = $_GET["VL"];
+	$getal = $_GET["getal"];
+	$keer  = $_GET["keer"];
 
-	while ($submit > 5) {
 
-		
-
-		
+	function keer($getal, $keer){
+		$X = $getal * $keer;
+		echo "$getal X $keer = $X";
 	}
+	
 
+	if(isset($_GET["S"])){
+		keer($getal, $keer);
+	}
+	
 
-
-
-	?>
+	 ?>
 		
 </body>	
 

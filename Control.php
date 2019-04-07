@@ -17,16 +17,16 @@
 		<input type="submit" name ="S" accesskey="g">
 	</form>
 
-	
 
 
-	<?php 
+
+	<?php
 
 	$naam_fout = "";
 	$naam = "";
 
 	if ($_SERVER["REQUEST_METHOD"] == "GET") {
-	   $naam = $_POST["naam"];
+	   $naam = $_GET["naam"];
 
 	   if ($naam == "") {       
 	      $naam_fout = "Naam is verplicht";
@@ -37,6 +37,19 @@
 	      }
 	   }
 	}
+
+	echo $naam;
+
+
+	$lengte = 164;
+	
+	if (is_numeric($lengte)) {
+	     echo "het is een getal.";
+	} else {
+	     echo "het is niet numeriek";
+	}
+
+
 
 
 	?>
