@@ -11,17 +11,22 @@
 </head>
 
 <body>
-	
+
 	<?php 
 
 	$naam_fout = "";
 	$naam = "";
+	
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	   $naam = $_POST["naam"];
+
 	   if ($naam == "") {       
 	      $naam_fout = "Naam is verplicht";
 	   } else {
-	      if (!preg_match("/^[a-zA-Z ]*$/",$naam)) {    $naam_fout = "Alleen letters en spaties";     }
+
+	      if (!preg_match("/^[a-zA-Z ]*$/",$naam)) {
+	      	$naam_fout = "Alleen letters en spaties";
+	      }
 	   }
 	}
 
