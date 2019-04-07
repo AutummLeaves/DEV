@@ -84,11 +84,16 @@
 
                 <input type="submit" name="submit" value="Submit" accesskey="p">
 
+
+
             </form>
 
             <br>
 
-            <?php 
+            <?php
+
+            $firstname = $_GET["firstName"];
+            $lastname = $_GET["lastName"];
 
             $firstname = $_POST["firstName"];
             $lastname = $_POST["lastName"];

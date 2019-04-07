@@ -42,3 +42,33 @@ To me, in most cases even having the "Confirm form resubmission" dialog pop up s
 
 So what do you do? Fortunately we have the Post/Redirect/Get design pattern. The user submits a POST request to the server, the server redirects the user's browser to another page and that page is then retrieved using GET.
 
+
+
+
+
+Use PHP's $_POST or $_GET superglobals to retrieve the value of the input tag via the name of the HTML tag.
+
+For Example, change the method in your form and then echo out the value by the name of the input:
+
+    Using $_GET method:
+
+    <form name="form" action="" method="get">
+      <input type="text" name="subject" id="subject" value="Car Loan">
+    </form>
+
+To show the value:
+
+    <?php echo $_GET['subject']; ?>
+
+    Using $_POST method:
+
+    <form name="form" action="" method="post">
+      <input type="text" name="subject" id="subject" value="Car Loan">
+    </form>
+
+To show the value:
+
+    <?php echo $_POST['subject']; ?>
+
+
+

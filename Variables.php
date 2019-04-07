@@ -25,6 +25,15 @@
 				<input type="submit" name ="Q" value="Green" accesskey="g">
 			</form>
 
+			<br>
+
+
+			<form method="GET" action="Variables.php">
+				<input type="text" name="gew" placeholder="Enter your weight">
+				<input type="text" name="len" placeholder="Enter your lenght">
+				<input type="submit" name ="S" value="Green" accesskey="g">
+			</form>
+
 			<?php
 
 		    // Variable 
@@ -76,6 +85,55 @@
 		    echo $y;
 
 		    echo "<p>Variable x outside function is: $x</p>";
+
+
+		    function switchCase(){
+
+		    	$value = red;
+
+		    	switch ($value) {
+		    		case 'red':
+		    			# code...
+		    			break;
+		    		case 'green':
+		    			# code...
+		    			break;
+		    		case 'yellow':
+		    			# code...
+		    			break;
+		    		case 'black':
+		    			# code...
+		    			break;
+
+		    		default:
+		    			# code...
+		    			break;
+		    	}
+
+		    switchCase();
+
+		    echo "Lengte: " . $lengte . "en   gewicht: " . $gewicht;
+
+
+
+
+
+		    function BMI($gew,$len) {
+
+		    	$gew = $_GET["gew"];
+            	$len = $_GET["len"];
+            	
+            	$bmi = $gew / (($len / 100)**2);
+			   	return $bmi;
+			   
+
+			}
+
+
+			echo $bmi
+
+
+		    }
 
 		    ?>
 		</div>
