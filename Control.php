@@ -12,12 +12,20 @@
 
 <body>
 
+	<form method="GET" action="Control.php">
+		<input type="text" name="naam">
+		<input type="submit" name ="S" accesskey="g">
+	</form>
+
+	
+
+
 	<?php 
 
 	$naam_fout = "";
 	$naam = "";
-	
-	if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+	if ($_SERVER["REQUEST_METHOD"] == "GET") {
 	   $naam = $_POST["naam"];
 
 	   if ($naam == "") {       
