@@ -10,12 +10,18 @@
 	<title>0952042</title>
 </head>
 
+<header>
+	<div>
+		<img class="flower" src="https://i.imgur.com/WmmnLR1.png" alt="Header" width="100%" height="250px">        
+	</div>
+</header>
+
 <body>
 
 
 	<!-- HTML text -->
 	<H1>Development Fundamentals Toets B I April 2019</H1>
-	<br><hr>
+	<hr>
 	<H2>Studentnaam: Pryesh Briedjlal</H2>
 	<H2>Studentnummer: 0952042</H2>
 	<h3>Klas: BIM103</h3>
@@ -103,16 +109,14 @@
 		}
 
 
-		 echo "Bekende Duitse automerken: <br>";
 		/* value verwijst naar de waarde van de 
 		    afzonderlijke elementen van de tabel  */
 		foreach ($aantalArray as $value) {
 			echo "$value <br>";
 		} 
-		  echo "Einde.";
+		 
 
-
-
+		 echo "Einde.";
 
 		
 		/* Return de berekening */
@@ -127,10 +131,6 @@
 		"<br> <br>" . "Eindbedrag is " . number_format((float)$totaal, 2,'.', '' ) . " Euro " . $korting . " Studentenkorting.";
 
 	}
-
-
-	
-	
 
 
 	/* Output van Functie */
