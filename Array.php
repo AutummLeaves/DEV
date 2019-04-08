@@ -10,6 +10,12 @@
 	<title></title>
 </head>
 
+<header>
+	<div>
+		<img class="flower" src="https://i.imgur.com/WmmnLR1.png" alt="Header" width="100%" height="250px">        
+	</div>
+</header>
+
 <body>
 
 	<form method="GET" action="Array.php">
@@ -28,6 +34,7 @@
 	}
 		
 	echo "Einde. ";
+	echo "$name[x]";
 
 	?>
 		

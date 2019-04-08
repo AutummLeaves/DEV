@@ -23,7 +23,7 @@
 	<?php
 
 	$naam_fout = "";
-	$naam = "";
+	$naam = $_GET["naam"];
 
 	if ($_SERVER["REQUEST_METHOD"] == "GET") {
 	   $naam = $_GET["naam"];
@@ -38,11 +38,12 @@
 	   }
 	}
 
-	echo $naam;
+	echo "$naam";
+	echo "$naam_fout";
 
 
 	$lengte = 164;
-	
+
 	if (is_numeric($lengte)) {
 	     echo "het is een getal.";
 	} else {

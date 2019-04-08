@@ -19,6 +19,8 @@
 <body>
 
 	<form method="GET" action="BMI.php">
+		<input type="text" name="name" placeholder="Enter your Name">
+		<br>
 		<input type="number" name="gew" placeholder="Enter your weight">
 		<input type="number" name="len" placeholder="Enter your lenght">
 		<input type="submit" name ="S" value="submit" accesskey="g">
@@ -28,6 +30,9 @@
 
 	$gew = $_GET["gew"];
     $len = $_GET["len"];
+
+
+
 
 	function BMI($gew,$len) {
     	$bmi = round($gew / (($len / 100)**2));
