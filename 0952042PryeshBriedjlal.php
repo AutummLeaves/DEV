@@ -59,7 +59,7 @@
 
 	/* Aantal */
 	$saus 		= $_GET["saus"];
-	$patat 		= $_GET["patat]"];
+	$patat 		= $_GET["patat"];
 	$kroket 	= $_GET["kroket"];
 	$frikandel 	= $_GET["frikandel"];
 	$tosti 		= $_GET["tosti"];
@@ -84,34 +84,57 @@
 
 		/* Aantal bestellingen */
 		$aantal = $patat + $kroket + $frikandel + $tosti;
+		$aantalArray = array($patat, $kroket, $frikandel, $tosti);
 
 		/* Saus berekening */
-		foreach ($saus as $prijs_patat) {
-			$prijs_patat = $prijs_saus * $patat;
+		switch ($saus) {
+			case $saus[1] OR $saus[2] OR $saus[3]:
+				$totaal = $totaal + ($prijs_patat + $prijs_saus) * $patat;
+				break;
+
+			default:
+				$totaal = $totaal + ($prijs_patat * $patat);
+				break;
 		}
 
 		/* Studentenkorting berekening */
 		if ($korting == "met") {
 			$totaal = $totaal * 0.90;
 		}
+
+
+		 echo "Bekende Duitse automerken: <br>";
+		/* value verwijst naar de waarde van de 
+		    afzonderlijke elementen van de tabel  */
+		foreach ($aantalArray as $value) {
+			echo "$value <br>";
+		} 
+		  echo "Einde.";
+
+
+
+
 		
 		/* Return de berekening */
-		return "Aantal is " . $aantal .
+		return "Aantal is " . $aantal ."<br> <br>".
 
-		"<br> <br> Aantal patat is: " . $patat . 
-		"<br>Aantal kroket is: " . $kroket .
-		"<br>Aantal frikandel is: " . $frikandel .
-		"<br>Aantal tosti is: " . $tosti .
+		" Aantal patat is: " 			. $patat . 
+		"<br>Aantal kroket is: " 		. $kroket .
+		"<br>Aantal frikandel is: "		. $frikandel .
+		"<br>Aantal tosti is: " 		. $tosti .
 
+		/* Met Number Format maken we een euro die op 2 decmale getallen afgerond wordt */
+		"<br> <br>" . "Eindbedrag is " . number_format((float)$totaal, 2,'.', '' ) . " Euro " . $korting . " Studentenkorting.";
 
-		"<br> <br>" . "Eindbedrag is " . $totaal . " Euro " . $korting . " Studentenkorting.";
 	}
 
 
+	
+	
+
+
 	/* Output van Functie */
-	echo "<br>";
-	echo calc($saus, $patat, $kroket, $frikandel, $tosti, $prijs_patat, $prijs_tosti, $prijs_frikandel, $prijs_kroket, $prijs_saus, $korting);
-	echo "<br>";
+	echo "<br>" . calc($saus, $patat, $kroket, $frikandel, $tosti, $prijs_patat, $prijs_tosti, $prijs_frikandel, $prijs_kroket, $prijs_saus, $korting) . "<br>";
 	 ?>
 		
 </body>	
