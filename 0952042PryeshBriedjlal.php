@@ -17,8 +17,6 @@
 </header>
 
 <body>
-
-
 	<!-- HTML text -->
 	<H1>Development Fundamentals Toets B I April 2019</H1>
 	<hr>
@@ -131,6 +129,7 @@
 		"<br> <br>" . "Eindbedrag is " . number_format((float)$totaal, 2,'.', '' ) . " Euro " . $korting . " Studentenkorting.";
 
 	}
+
 
 
 	/* Output van Functie */
